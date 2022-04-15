@@ -1,0 +1,92 @@
+---
+layouts: dafault
+title: services
+---
+
+<div class="support">
+    <div class="content">
+        <div class="form__title">
+          Обращения
+        </div>
+        
+        <div class="block_form">
+          <form class="form" action="mail.php" method="POST" onsubmit="send(event, 'mail.php')">
+                    
+            <div className="form__name  form_flexibility">
+              <p class="form__text">Фамилия Имя Отчество</p>
+              <input class="form__input" tabindex="1" name="user_name" type="text" placeholder="ФИО">
+            </div>
+
+            <div class="form__phone  form_flexibility">
+              <p class="form__text">Номер телефона</p>
+              <input class="form__input" tabindex="2" name="user_phone" type="tel" placeholder="+7 9XX XXX XX XX">
+            </div>
+
+            <div class="form__email  form_flexibility">
+              <p class="form__text">Электронная почта</p>
+              <input class="form__input" tabindex="3" name="email" type="email" placeholder="username@mail.ru">
+            </div>
+
+            <div class="form__choice  form_flexibility">
+              <p class="form__text">Выберите свою организацию</p>
+              <select class="form__select  form__input" id="sitetime" onchange="document.getElementById('rez').value=value">
+                <option value="" selected disabled hidden>Выбрать</option>
+                <option value="Управление делами Главы Республики Ингушетия">Управление делами Главы Республики Ингушетия</option>
+                <option value="Министерство промышленности и цифрового развития">Министерство промышленности и цифрового развития</option>
+                <option value="Министерство экономического развития">Министерство экономического развития</option>
+                <option value="Министерство финансов">Министерство финансов</option>
+                <option value="Министерство образования и науки">Министерство образования и науки</option>
+                <option value="Министерство труда, занятости и социального развития">Министерство труда, занятости и социального развития</option>
+                <option value="Министерство строительства и жилищно-коммунального хозяйства">Министерство строительства и жилищно-коммунального хозяйства</option>
+                <option value="Министерство сельского хозяйства и продовольствия">Министерство сельского хозяйства и продовольствия</option>
+                <option value="Министерство природных ресурсов и экологии">Министерство природных ресурсов и экологии</option>
+                <option value="Министерство по физической культуре и спорту">Министерство по физической культуре и спорту</option>
+                <option value="Министерство по внешним связям, национальной политике, печати и информации">Министерство по внешним связям, национальной политике, печати и информации</option>
+                <option value="Министерство культуры">Министерство культуры</option>
+                <option value="Министерство имущественных и земельных отношений">Министерство имущественных и земельных отношений</option>
+                <option value="Министерство здравоохранения">Министерство здравоохранения</option>
+                <option value="Управление по обеспечению деятельности по защите населения и территории от чрезвычайных ситуаций">Управление по обеспечению деятельности по защите населения и территории от чрезвычайных ситуаций</option>
+                <option value="Управление по организации деятельности мировых судей Республики Ингушетия">Управление по организации деятельности мировых судей Республики Ингушетия</option>
+                <option value="Государственная архивная служба Республики Ингушетия">Государственная архивная служба</option>
+                <option value="Государственная жилищная инспекция">Государственная жилищная инспекция</option>
+                <option value="Государственная служба ЗАГС РИ">Государственная служба ЗАГС РИ</option>
+                <option value="Государственное управление автомобильных дорог РИ">Государственное управление автомобильных дорог РИ</option>
+                <option value="Инспекция государственного строительного надзора Республики Ингушетия">Инспекция государственного строительного надзора</option>
+                <option value="Комитет архитектуры и градостроительства">Комитет архитектуры и градостроительства</option>
+                <option value="Комитет госзаказа">Комитет госзаказа</option>
+                <option value="Комитет Государственного финансового контроля">Комитет Государственного финансового контроля</option>
+                <option value="Комитет по делам молодежи">Комитет по делам молодежи</option>
+                <option value="Комитет по туризму">Комитет по туризму</option>
+                <option value="Ветеринарное управление">Ветеринарное управление</option>
+
+              </select>
+              <input type='text' class="form__input  hidden" name="organization" id='rez'>
+            </div>
+
+            <div className="form__name  form_flexibility">
+              <p class="form__text">Укажите Вашу должность в данной организации</p>
+              <input type="text" class="form__input" tabindex="4" name="status" placeholder="должность" required>
+            </div>
+
+            <div class="form__information  form_flexibility">
+              <p class="form__text">Причина обращения</p>
+              <textarea tabindex="4" name="message" id="" cols="80" rows="10"></textarea>
+            </div>
+            
+            <div class="form__email  form_flexibility"> Файл
+              <input class="" tabindex="5" type="file" name="myfile[]" multiple accept="image/*">
+            </div>
+
+            <div class="buttons">
+              <button class="btn  btn_reset" type="reset">Очистить</button>
+              <input class="btn  btn_submit" value="Отправить" type="submit">
+            </div>
+
+          </form>
+        </div>
+
+        <div class="block__warning">
+          При возникновении технических неполадок с сайтом, просьба сообщить по номеру: +7 (999) 336 00 75
+        </div>
+    </div>
+</div>

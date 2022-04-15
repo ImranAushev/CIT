@@ -1,0 +1,39 @@
+.mn-header__block_menu {
+    margin: 1rem 0 0 0;
+    padding: 1rem 0;
+
+    background-color: #000441;
+    background: linear-gradient(258.56deg,#325de9 31.66%,#548cf6 80.67%);
+    // opacity: .911;
+
+    font-size: 1.1rem;
+}
+
+.mn-header__block_menu_list {
+    display: flex;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+}
+
+.mn-header__block_menu_item {
+    margin: 0 3rem 0 0;
+
+    cursor: pointer;
+
+    &:hover .mn-header__about_link {
+        color: $brown;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.mn-header__about_link {
+    color: $while;
+    font-weight: bold;
+}

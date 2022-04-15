@@ -1,0 +1,93 @@
+@media (max-width: 767px) {    
+    .mn-header__burger {
+        display: flex;
+        justify-content: flex-end;
+
+        position: relative;
+
+        padding: 0 1.4rem 0 0;
+
+        background-color: $black;
+    }
+// рисуем бургер
+    .mn-header__burger span {
+        position: absolute;
+        width: 1.5rem;
+        height: 2px;
+
+        top: 1.3rem;
+
+        background-color: $black;
+
+        transition: all 0.3s ease 0s;
+    }
+
+    .mn-header__burger:before,
+    .mn-header__burger:after {
+        content: '';
+        position: absolute;
+
+        background-color: $black;
+
+        width: 1.5rem;
+        height: 2px;
+
+        transition: all 0.3s ease 0s;
+    }
+
+    .mn-header__burger:before {
+        top: .8rem;
+    }
+
+    .mn-header__burger:after {
+        bottom: -1.9rem;
+    }
+
+    .mn-header__burger.active:before {
+        transform: rotate(45deg);
+        top: 1rem;
+    }
+
+    .mn-header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: -1.1rem;
+    }
+
+    .mn-header__burger.active span {
+        transform: scale(0);
+    }
+//меню для бургера
+    .mn-header__block_menu {
+        position: absolute;
+        right: 0;
+        top: -240px;
+        width: 100%;
+
+        transition: all 0.9s ease 0s;
+    }
+
+    .mn-header__block_menu.active {
+        position: absolute;
+        right: 0;
+        top: 310px;
+        width: 100%;
+        height: 40%;
+
+        @media (min-width: 450px) {
+            top: 280px;
+        }
+
+        @media (min-width: 539px) {
+            top: 270px;
+        }
+
+        @media (min-width: 700px) {
+            top: 210px;
+        }
+    }
+
+// add отступы для спска
+    .mn-header__block_menu_list li {
+        margin: .6rem 1.4rem .6rem;
+    }
+}

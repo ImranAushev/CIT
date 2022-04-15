@@ -1,0 +1,21 @@
+.aside__menu {
+    font-size: 1.1rem;
+    margin: 48px 0;
+}
+
+.aside__item {
+    padding: .8rem 1.4rem;
+    margin: 5px 0;
+
+    border-left: 1px solid #5b7dec;
+
+    &:hover .aside__link {
+        color: $blue_light;
+        transition: all .2s ease;
+    }
+}
+
+.aside__link {
+    text-decoration: none;
+    color: linear-gradient(258.56deg,#325de9 31.66%,#548cf6 80.67%);
+}

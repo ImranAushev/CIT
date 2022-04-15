@@ -1,0 +1,45 @@
+.mn-header__block_emblem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-top__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-top__item {
+    padding: 0 1.2rem 0 0;
+
+    &:hover .menu-top__link {
+        color: $brown;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.menu-top__link {
+    padding: .3rem;
+    color: $black_light;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mn-header__support {
+    font-size: .9rem;
+    font-weight: 600;
+    color: $blue;
+
+    padding: .2rem;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $while;
+
+        background-color: rgb(146, 25, 25);
+        border-radius: .5rem;
+
+        transition: all 0.4s ease 0s;
+    }
+}

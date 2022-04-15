@@ -1,0 +1,13 @@
+.mn-header__menu-top {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mn-header a {
+    text-decoration: none;
+}
+
+.mn-header__row {
+    display: block;
+}

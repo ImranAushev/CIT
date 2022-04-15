@@ -1,0 +1,159 @@
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.training__container {
+    padding: 2rem 2em;
+
+    @media (max-width: 768px) {
+        padding: 1rem 2em;
+    }
+}
+
+.training-top {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+.training-bottom {
+    padding: 1.2rem 0;
+
+    background-color: $black;
+}
+
+.training__slider {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+
+    // background-color: $black;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background: $while url("../img/training/ajax-loader.gif") center no-repeat;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &.slick-initialized {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.training-bottom {
+    position: relative;
+}
+
+.training__item {
+    background-color: rgb(3, 3, 3);
+    overflow: hidden;
+    max-width: 310px;
+
+    position: relative;
+
+    &:hover {
+        .training__img {
+            opacity: .3;
+        }
+
+        .training__title {
+            transform: translateY(0);
+        }
+    }
+}
+
+.training__link {
+    display: block;
+}
+
+.training__img {
+    display: block;
+
+    max-height: 160px;
+
+    transition: opacity .1s linear;
+}
+
+.training__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    padding: 1.3rem 0;
+
+    font-size: 1.6rem;
+    color: $while;
+
+    pointer-events: none;
+    transform: translateY(100%);
+    transition: transform .3s linear;
+
+    h6 {
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 520px) {
+        transform: translateY(0);
+    }
+}
+
+.training__arrow {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    &:hover {
+        .training__arrow--icon {
+            fill: $black;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &--prev {
+        left: -3rem;
+
+        transform: translateY(-50%)
+        rotate(180deg);
+    }
+
+    &--next {
+        right: -3rem;
+
+        transform: translateY(-50%);
+    }
+}
+
+.training__arrow--icon {
+    width: 40px;
+    height: 40px;
+
+    fill: #a3a3a3;
+
+    transition: fill .1s linear;
+}
+
+.training__text {
+    background-color: rgb(248, 248, 248);
+    color: $black;
+    text-align: center;
+}
